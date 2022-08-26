@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --mobile-px: 372px;
+    --desktop-px:1440px;
+    --primary-color1: hsl(215, 51%, 70%);
+    --primary-color2: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-dark-blue-main);
+}
+
+.box{
+    width: 350px;
+    margin: 1em;
+    padding: 1.5em;
+    border-radius: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color: var(--Very-dark-blue-card);
+}
+
+.box .image{
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .image img{
+    width: 100%;
+    display: block;
+}
+
+.imageFiltro{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.45;
+    background-color: var(--primary-color2);
+}
+
+
+.box .image:hover > .imageFiltro{
+    position: absolute;
+    top: 0;
+}
+
+/* .imageFiltro img{
+    width: 55px;
+} */
+
+.box .image:hover > .imageView{
+    position: absolute;
+    top: 45%;
+    width: 55px;
+    display: block;
+}
+
+.boxInfo{
+    /* margin: 1em 0; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.boxInfo h2{
+    display:inline;
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.boxInfo h2:hover{
+    cursor: pointer;
+    color: var(--primary-color2);
+}
+
+.boxInfo p{
+    color: var(--primary-color1);
+    font-weight: 300;
+}
+
+.boxData{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 1em;
+    border-bottom: 2px var(--Very-dark-blue-line) solid;
+}
+
+.boxData p:nth-child(1){
+    color: var(--primary-color2);
+}
+
+.boxData p:nth-child(1)::before{
+    content: url(./images/icon-ethereum.svg);
+    margin-right: 0.5em;
+    
+}
+
+.boxData p:nth-child(2){
+    color: var(--primary-color1);
+}
+
+.boxData p:nth-child(2)::before{
+    content: url(./images/icon-clock.svg);
+    margin-right: 0.5em;
+}
+
+.boxUser{
+    width: 100%;
+    /* margin-top: 1em; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1em;
+    color: var(--primary-color1);
+}
+
+.boxUser img{
+    border: 1px var(--white) solid;
+    border-radius: 100%;
+    width: 35px;
+}
+
+.boxUser span{
+    color: var(--white);
+}
+
+.boxUser span:hover{
+    cursor: pointer;
+    color: var(--primary-color2);
+}
